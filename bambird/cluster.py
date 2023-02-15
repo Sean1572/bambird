@@ -34,7 +34,7 @@ from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler, RobustScaler, MinMaxScaler
 
 # umap
-import umap 
+import umap.umap_ as umap 
 
 # Kneed package to find the knee of a curve
 from kneed import KneeLocator

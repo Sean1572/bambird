@@ -495,6 +495,7 @@ def multicpu_extract_rois(
                         pbar.update(1)
                         df_rois = df_rois.append(df_rois_temp)
             
+            print(df_rois.shape)
             # sort filename for each categories
             #---------------------------------
             df_rois_sorted = pd.DataFrame()
@@ -522,7 +523,7 @@ def multicpu_extract_rois(
                     save_path.mkdir(parents=True, exist_ok=True)
                 
                 # save and append dataframe 
-                csv_fullfilename = save_path / save_csv_filename
+                csv_fullfilename = save_path + "/" + save_csv_filename
                 df_rois_sorted.to_csv(csv_fullfilename, 
                                       sep=';', 
                                       header=True)

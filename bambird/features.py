@@ -296,7 +296,8 @@ def multicpu_compute_features(
         full path the csv file with all the features computed for each roi. 
         if the file already exists, the new features will be appended to the file.
     """
-
+    df_features_sorted = pd.DataFrame()
+    csv_fullfilename = save_csv_filename
     if verbose :
         print('\n')
         print('====================== COMPUTE FEATURES ======================\n')
